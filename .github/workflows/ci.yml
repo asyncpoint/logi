@@ -1,0 +1,81 @@
+name: ci
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+# A newer push to the same branch makes older runs pointless.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      # Reproducibility: fail if go.mod/go.sum are not already tidy instead of
+      # silently rewriting them on the build machine.
+      - run: go mod tidy -diff
+      - run: go mod verify
+      - name: gofmt
+        run: test -z "$(gofmt -l .)" || (gofmt -l . && exit 1)
+      - run: go vet ./...
+      - run: GOOS=windows go vet ./...
+      - run: GOOS=darwin go vet ./...
+  # Third-party analysers live in their own job, using their latest releases, so
+  # that a tool that lags behind a new Go version (or a new advisory) cannot hide
+  # the build and test results above.
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: go run honnef.co/go/tools/cmd/staticcheck@latest ./...
+      - run: go run golang.org/x/vuln/cmd/govulncheck@latest ./...
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: go build -mod=readonly ./...
+      - run: go test -mod=readonly -race -short ./...
+      - run: go test -mod=readonly ./test/integration   # scale tests (bounded memory, lazy static access)
+  fuzz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: go test ./internal/parser -run '^$' -fuzz '^FuzzJSONUnescape$' -fuzztime 20s
+      - run: go test ./internal/parser -run '^$' -fuzz '^FuzzParsers$' -fuzztime 30s
+      - run: go test ./internal/engine -run '^$' -fuzz '^FuzzSanitizeText$' -fuzztime 20s
+      - run: go test ./internal/engine -run '^$' -fuzz '^FuzzSanitizeKeepTabs$' -fuzztime 20s
+      - run: go test ./internal/engine -run '^$' -fuzz '^FuzzStripANSI$' -fuzztime 20s
+      - run: go test ./internal/input -run '^$' -fuzz '^FuzzDetectAndStrip$' -fuzztime 20s
+      - run: go test ./internal/framing -run '^$' -fuzz '^FuzzFramerSplitInvariance$' -fuzztime 30s
+      - run: go test ./internal/framing -run '^$' -fuzz '^FuzzLooksLikeTimestampNeverPanics$' -fuzztime 20s
+      - run: go test ./internal/filter -run '^$' -fuzz '^FuzzContainsFold$' -fuzztime 20s
+      - run: go test ./internal/filter -run '^$' -fuzz '^FuzzFilterPrefilterIsNecessary$' -fuzztime 30s
+      - run: go test ./internal/filter -run '^$' -fuzz '^FuzzParseTimeSpec$' -fuzztime 20s
+      - run: go test ./internal/search -run '^$' -fuzz '^FuzzMatcherRawKeep$' -fuzztime 30s
+      - run: go test ./internal/plugins/ncache -run '^$' -fuzz '^FuzzNCacheParse$' -fuzztime 20s
+  # Every push and pull request builds the six release archives (linux, darwin and
+  # windows for amd64 and arm64) and runs them, so a broken cross-build shows up
+  # before a release. Download them from the run's "Artifacts" section.
+  binaries:
+    needs: [lint, test]
+    uses: ./.github/workflows/build.yml
+    with:
+      version: 0.0.0-ci.${{ github.run_number }}

@@ -1,0 +1,53 @@
+# logi configuration (YAML subset: nested "key: value", '#' comments).
+# Precedence: CLI flags > LOGI_* environment > this file > defaults.
+# Location: --config <path>, $LOGI_CONFIG, or <user-config-dir>/logi/config.yaml
+# logi only ever READS this file; it never creates or modifies it.
+
+color: auto               # auto (detect; honours NO_COLOR) | always (force 16-colour ANSI) | never
+parser: auto              # auto | generic | json | ncache | ncache-events
+multiline: auto           # auto | off (strictly one record per line)
+
+buffer:
+  capacity: 50000         # live mode: records kept in the ring buffer
+  max_bytes: 256MiB       # live mode: byte budget (0 = unlimited)
+
+live:
+  backlog: 8MiB           # live mode: bytes before EOF loaded at start (0 = new data only)
+  poll: false             # true = never use filesystem notifications
+  multiline_idle_flush: 300ms
+
+limits:
+  max_record_size: 64KiB  # larger records are truncated (offsets stay exact)
+  max_lines: 2000         # longer multiline records are truncated
+
+performance:
+  batch_interval: 25ms    # UI notification batching
+  max_filter_matches: 1000000
+  static_counts: true     # static files: count errors/warnings in the background for the status bar (false saves a pass over very large files)
+
+directory:                # when the path is a directory
+  mode: latest            # latest: follow the newest file, roll over | all: follow every file
+  glob: ""                # e.g. "*.log,*.txt"; empty = every log-like file (skips hidden, archives, app.log.1)
+  max_files: 32           # mode "all": files followed at once
+  source_gutter: auto     # mode "all": file-colour bar in the row gutter: auto (while the source column is hidden) | on | off
+  source_markers: false   # mode "all": with >10 files, put a shape (◆ ▲ ■ ●) before names whose colour repeats
+
+columns:                  # names: id, time, level, source, message + the format's fields
+  hidden: ""              # e.g. "id, thread" (NCache cache log: appdomain, logger, thread, event;
+                          #  NCache event log: component, eventid)
+  shown: ""               # force visible, e.g. "appdomain" (source is shown automatically in dir mode "all")
+
+search:
+  mode: literal           # literal | regex | field
+
+plugins:
+  ncache:                  # one switch for both NCache formats (cache log + event log)
+    enabled: true
+
+# Rebind keys per action (comma separated). Actions: down up page_down page_up top
+# bottom search search_next search_prev next_error previous_error next_warning
+# previous_warning jump_record toggle_bookmark next_bookmark previous_bookmark
+# select_range clear_selection copy filter clear_filter inspect follow quick_open
+# palette help close quit column_prev column_next hide_column show_columns pick_file
+keys:
+  search: "ctrl+f, /"

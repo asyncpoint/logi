@@ -1,0 +1,106 @@
+# Publishes a GitHub release with the binaries for Windows, Linux and macOS on
+# amd64 and arm64 whenever a version tag is pushed:
+#
+#   git tag v1.1.0 && git push origin v1.1.0
+#
+# It can also be started by hand (Actions > Release > Run workflow) to build the
+# archives as a downloadable artifact without publishing anything.
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to build, e.g. 1.1.0 (builds the archives as an artifact; only a pushed tag publishes a release)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+      prerelease: ${{ steps.v.outputs.prerelease }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Work out the version
+        id: v
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          v="${INPUT_VERSION:-$REF_NAME}"
+          v="${v#v}"
+          if ! echo "$v" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?$'; then
+            echo "::error::'$v' is not a semantic version such as 1.2.3 or 1.2.3-rc.1"; exit 1
+          fi
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          case "$v" in *-*) echo "prerelease=true" >> "$GITHUB_OUTPUT";; *) echo "prerelease=false" >> "$GITHUB_OUTPUT";; esac
+      - name: CHANGELOG has an entry for this version
+        if: steps.v.outputs.prerelease == 'false'
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          if ! grep -Eq "^## ${VERSION//./\\.}( |$)" CHANGELOG.md; then
+            echo "::error::CHANGELOG.md has no '## ${VERSION}' section. Rename '## Unreleased' to '## ${VERSION} — <date>' and tag again."; exit 1
+          fi
+      - run: go mod tidy -diff
+      - run: go vet ./...
+      - run: go test -race ./...
+
+  build:
+    needs: verify
+    uses: ./.github/workflows/build.yml
+    with:
+      version: ${{ needs.verify.outputs.version }}
+
+  publish:
+    name: publish release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [verify, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: logi-binaries
+          path: dist
+      - name: Release notes from CHANGELOG.md
+        env:
+          VERSION: ${{ needs.verify.outputs.version }}
+        run: |
+          awk -v v="$VERSION" '/^## /{ if (found) exit; split($0, a, " "); if (a[2] == v) { found = 1; next } } found' CHANGELOG.md > notes.md
+          if [ ! -s notes.md ]; then echo "Pre-release build of logi v${VERSION}." > notes.md; fi
+          {
+            echo
+            echo "---"
+            echo "Download the archive for your system: \`logi_${VERSION}_<os>_<arch>\` for linux, darwin (macOS) and windows, each for amd64 (x64) and arm64."
+            echo "Verify with \`SHA256SUMS\` (\`sha256sum -c SHA256SUMS --ignore-missing\`). Usage: see README.md and docs/HOWTO.md inside the archive."
+          } >> notes.md
+          cat notes.md
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: logi v${{ needs.verify.outputs.version }}
+          body_path: notes.md
+          prerelease: ${{ needs.verify.outputs.prerelease == 'true' }}
+          fail_on_unmatched_files: true
+          files: |
+            dist/*.tar.gz
+            dist/*.zip
+            dist/SHA256SUMS

@@ -1,0 +1,12 @@
+TIMESTAMP                                   SOURCE                  EVENTID                 LEVEL                   MESSAGE
+2026-09-20 06:22:56, 110                        NCache                  1020                    Information             NCache Server has been successfully registered for FREE evaluation on machine 172.21.0.2.
+
+END
+2026-09-20 06:22:57, 153                        ExecutionService        1018                    Information             Execution service started successfully using IP info 127.0.0.1:9850
+2026-09-20 06:23:00, 184                        NCacheSvc               1025                    Information             NCache daemon is starting...
+2026-09-20 06:23:00, 504                        NCache                  1025                    Information             NCache service has started successfully
+2026-09-20 06:23:00, 507                        NCacheSvc               1025                    Information             NCache daemon has started.
+2026-09-20 06:23:00, 517                        NCache                  1018                    Information             NCache Management Center has been started successfully.
+2026-09-20 06:23:16, 425                        NCache                  1018                    Information             Cache [ democache ] separate process is started successfully.
+2026-09-20 06:23:21, 489                        NCache                  1006                    Information             Node "172.21.0.2:7803 (replica)" has joined to "demoCache".
+2026-09-20 06:23:21, 513                        NCache                  1000                    Information             "demoCache" started successfully.

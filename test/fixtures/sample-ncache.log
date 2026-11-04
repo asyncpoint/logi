@@ -1,0 +1,593 @@
+TIMESTAMP                       APPDOMAIN                                       LOGGERNAME                                      THREADNAME                                      LEVEL           MESSAGE
+2026-09-19 08:00:00,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           ConnectionTable.GetConnection           client disconnected
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:00,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         heartbeat
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:00,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         request completed
+2026-09-19 08:00:00,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Insert                            configuration reloaded
+2026-09-19 08:00:00,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            item expired
+2026-09-19 08:00:00,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            bulk insert finished
+2026-09-19 08:00:00,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               client disconnected
+2026-09-19 08:00:00,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               item expired
+2026-09-19 08:00:00,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:00,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:00,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           ConnectionTable.GetConnection           request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:00,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         client disconnected
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:00,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Add                               connection established
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:00,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Add                               configuration reloaded
+2026-09-19 08:00:00,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           heartbeat
+2026-09-19 08:00:00,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            GMS.InstallView                         request completed
+2026-09-19 08:00:00,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Insert                            heartbeat
+2026-09-19 08:00:00,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            CacheInfo                               bulk insert finished
+2026-09-19 08:00:00,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:00,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         connection established
+2026-09-19 08:00:01,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         connection established
+2026-09-19 08:00:01,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            ConnectionTable.GetConnection           configuration reloaded
+2026-09-19 08:00:01,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               cache miss
+2026-09-19 08:00:01,150         Alachisoft.NCache.CacheHost                     demoCache                                       13                                              ERROR           CacheInfo                               client disconnected
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:01,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Add                               item expired
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:01,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         item expired
+2026-09-19 08:00:01,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               request completed
+2026-09-19 08:00:01,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            pb.ClientGmsImpl.determineCoord         heartbeat
+2026-09-19 08:00:01,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           retrying operation
+2026-09-19 08:00:01,450         Alachisoft.NCache.CacheHost                     demoCache                                       56                                              INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:01,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           TCP.start                               configuration reloaded
+2026-09-19 08:00:01,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Message Manager                         bulk insert finished
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:01,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               item expired
+2026-09-19 08:00:01,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Insert                            configuration reloaded
+2026-09-19 08:00:01,700         Alachisoft.NCache.CacheHost                     demoCache                                       17                                              INFO            GMS.InstallView                         connection established
+2026-09-19 08:00:01,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         bulk insert finished
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:01,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               cache hit
+2026-09-19 08:00:01,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Add                               retrying operation
+2026-09-19 08:00:01,900         Alachisoft.NCache.CacheHost                     demoCache                                       52                                              INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:01,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:02,000         Alachisoft.NCache.CacheHost                     demoCache                                       78                                              INFO            pb.ClientGmsImpl.determineCoord         connection established
+2026-09-19 08:00:02,050         Alachisoft.NCache.CacheHost                     demoCache                                       35                                              INFO            CacheInfo                               bulk insert finished
+2026-09-19 08:00:02,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            pb.ClientGmsImpl.determineCoord         cache miss
+2026-09-19 08:00:02,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               configuration reloaded
+2026-09-19 08:00:02,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           pb.ClientGmsImpl.determineCoord         configuration reloaded
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:02,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            retrying operation
+2026-09-19 08:00:02,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               cache miss
+2026-09-19 08:00:02,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            bulk insert finished
+2026-09-19 08:00:02,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         bulk insert finished
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:02,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               client disconnected
+2026-09-19 08:00:02,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         cache miss
+2026-09-19 08:00:02,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               cache hit
+2026-09-19 08:00:02,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         bulk insert finished
+2026-09-19 08:00:02,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         cache miss
+2026-09-19 08:00:02,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               item expired
+2026-09-19 08:00:02,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               bulk insert finished
+2026-09-19 08:00:02,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         request completed
+2026-09-19 08:00:02,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         request completed
+2026-09-19 08:00:02,900         Alachisoft.NCache.CacheHost                     demoCache                                       51                                              INFO            Message Manager                         retrying operation
+2026-09-19 08:00:02,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         bulk insert finished
+2026-09-19 08:00:03,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         connection established
+2026-09-19 08:00:03,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         configuration reloaded
+2026-09-19 08:00:03,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            GMS.InstallView                         request completed
+2026-09-19 08:00:03,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           retrying operation
+2026-09-19 08:00:03,200         Alachisoft.NCache.CacheHost                     demoCache                                       44                                              INFO            Message Manager                         cache hit
+2026-09-19 08:00:03,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               bulk insert finished
+2026-09-19 08:00:03,300         Alachisoft.NCache.CacheHost                     demoCache                                       57                                              INFO            GMS.InstallView                         item expired
+2026-09-19 08:00:03,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               bulk insert finished
+2026-09-19 08:00:03,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         cache miss
+2026-09-19 08:00:03,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            pb.ClientGmsImpl.determineCoord         item expired
+2026-09-19 08:00:03,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               configuration reloaded
+2026-09-19 08:00:03,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Message Manager                         cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:03,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               configuration reloaded
+2026-09-19 08:00:03,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:03,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            item expired
+2026-09-19 08:00:03,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Insert                            bulk insert finished
+2026-09-19 08:00:03,800         Alachisoft.NCache.CacheHost                     demoCache                                       33                                              INFO            GMS.InstallView                         configuration reloaded
+2026-09-19 08:00:03,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         client disconnected
+2026-09-19 08:00:03,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               bulk insert finished
+2026-09-19 08:00:03,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         bulk insert finished
+2026-09-19 08:00:04,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:04,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:04,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Message Manager                         heartbeat
+2026-09-19 08:00:04,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         heartbeat
+2026-09-19 08:00:04,200         Alachisoft.NCache.CacheHost                     demoCache                                       21                                              INFO            Message Manager                         request completed
+2026-09-19 08:00:04,250         Alachisoft.NCache.CacheHost                     demoCache                                       36                                              INFO            pb.ClientGmsImpl.determineCoord         configuration reloaded
+2026-09-19 08:00:04,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           ConnectionTable.GetConnection           retrying operation
+2026-09-19 08:00:04,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         item expired
+2026-09-19 08:00:04,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               cache hit
+2026-09-19 08:00:04,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache miss
+2026-09-19 08:00:04,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           TCP.start                               cache miss
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:04,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               bulk insert finished
+2026-09-19 08:00:04,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         retrying operation
+2026-09-19 08:00:04,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            cache miss
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:04,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               connection established
+2026-09-19 08:00:04,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         cache miss
+2026-09-19 08:00:04,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Message Manager                         heartbeat
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:04,850         Alachisoft.NCache.CacheHost                     demoCache                                       66                                              DEBUG           pb.ClientGmsImpl.determineCoord         item expired
+2026-09-19 08:00:04,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           pb.ClientGmsImpl.determineCoord         request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:04,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         retrying operation
+2026-09-19 08:00:05,000         Alachisoft.NCache.CacheHost                     demoCache                                       59                                              INFO            TCP.start                               item expired
+2026-09-19 08:00:05,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           configuration reloaded
+2026-09-19 08:00:05,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           item expired
+2026-09-19 08:00:05,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           ConnectionTable.GetConnection           cache miss
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:05,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               cache miss
+2026-09-19 08:00:05,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Message Manager                         client disconnected
+2026-09-19 08:00:05,300         Alachisoft.NCache.CacheHost                     demoCache                                       3                                               ERROR           TCP.start                               retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:05,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Insert                            connection established
+2026-09-19 08:00:05,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           item expired
+2026-09-19 08:00:05,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Message Manager                         configuration reloaded
+2026-09-19 08:00:05,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:05,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           retrying operation
+2026-09-19 08:00:05,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           ConnectionTable.GetConnection           request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:05,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               configuration reloaded
+2026-09-19 08:00:05,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         cache hit
+2026-09-19 08:00:05,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               bulk insert finished
+2026-09-19 08:00:05,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         connection established
+2026-09-19 08:00:05,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           GMS.InstallView                         bulk insert finished
+2026-09-19 08:00:05,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               bulk insert finished
+2026-09-19 08:00:05,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           item expired
+2026-09-19 08:00:06,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               retrying operation
+2026-09-19 08:00:06,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           ConnectionTable.GetConnection           cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:06,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         connection established
+2026-09-19 08:00:06,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         configuration reloaded
+2026-09-19 08:00:06,200         Alachisoft.NCache.CacheHost                     demoCache                                       35                                              INFO            CacheInfo                               cache hit
+2026-09-19 08:00:06,250         Alachisoft.NCache.CacheHost                     demoCache                                       59                                              INFO            TCP.start                               request completed
+2026-09-19 08:00:06,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            connection established
+2026-09-19 08:00:06,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           item expired
+2026-09-19 08:00:06,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           heartbeat
+2026-09-19 08:00:06,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            ConnectionTable.GetConnection           connection established
+2026-09-19 08:00:06,500         Alachisoft.NCache.CacheHost                     demoCache                                       17                                              INFO            pb.ClientGmsImpl.determineCoord         cache miss
+2026-09-19 08:00:06,550         Alachisoft.NCache.CacheHost                     demoCache                                       39                                              INFO            CacheInfo                               cache miss
+2026-09-19 08:00:06,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         retrying operation
+2026-09-19 08:00:06,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            retrying operation
+2026-09-19 08:00:06,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               connection established
+2026-09-19 08:00:06,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               cache hit
+2026-09-19 08:00:06,800         Alachisoft.NCache.CacheHost                     demoCache                                       52                                              ERROR           ConnectionTable.GetConnection           client disconnected
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:06,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            GMS.InstallView                         request completed
+2026-09-19 08:00:06,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache miss
+2026-09-19 08:00:06,950         Alachisoft.NCache.CacheHost                     demoCache                                       55                                              INFO            GMS.InstallView                         client disconnected
+2026-09-19 08:00:07,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Add                               connection established
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:07,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           TCP.start                               retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:07,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Insert                            cache miss
+2026-09-19 08:00:07,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:07,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            item expired
+2026-09-19 08:00:07,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Add                               cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:07,300         Alachisoft.NCache.CacheHost                     demoCache                                       47                                              DEBUG           TCP.start                               connection established
+2026-09-19 08:00:07,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               request completed
+2026-09-19 08:00:07,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            CacheInfo                               heartbeat
+2026-09-19 08:00:07,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           CacheInfo                               item expired
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:07,500         Alachisoft.NCache.CacheHost                     demoCache                                       79                                              INFO            Message Manager                         client disconnected
+2026-09-19 08:00:07,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         cache hit
+2026-09-19 08:00:07,600         Alachisoft.NCache.CacheHost                     demoCache                                       3                                               ERROR           pb.ClientGmsImpl.determineCoord         retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:07,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:07,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               bulk insert finished
+2026-09-19 08:00:07,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            request completed
+2026-09-19 08:00:07,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache miss
+2026-09-19 08:00:07,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               cache miss
+2026-09-19 08:00:07,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Insert                            request completed
+2026-09-19 08:00:07,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           bulk insert finished
+2026-09-19 08:00:08,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            pb.ClientGmsImpl.determineCoord         cache miss
+2026-09-19 08:00:08,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           TCP.start                               request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:08,100         Alachisoft.NCache.CacheHost                     demoCache                                       10                                              INFO            CacheInfo                               item expired
+2026-09-19 08:00:08,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache miss
+2026-09-19 08:00:08,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         connection established
+2026-09-19 08:00:08,250         Alachisoft.NCache.CacheHost                     demoCache                                       55                                              WARN            ConnectionTable.GetConnection           item expired
+2026-09-19 08:00:08,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         heartbeat
+2026-09-19 08:00:08,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           GMS.InstallView                         connection established
+2026-09-19 08:00:08,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               connection established
+2026-09-19 08:00:08,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           cache hit
+2026-09-19 08:00:08,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               item expired
+2026-09-19 08:00:08,550         Alachisoft.NCache.CacheHost                     demoCache                                       35                                              ERROR           CacheInfo                               connection established
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:08,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               bulk insert finished
+2026-09-19 08:00:08,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           cache miss
+2026-09-19 08:00:08,700         Alachisoft.NCache.CacheHost                     demoCache                                       53                                              INFO            ConnectionTable.GetConnection           client disconnected
+2026-09-19 08:00:08,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               request completed
+2026-09-19 08:00:08,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         client disconnected
+2026-09-19 08:00:08,850         Alachisoft.NCache.CacheHost                     demoCache                                       2                                               INFO            GMS.InstallView                         retrying operation
+2026-09-19 08:00:08,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               client disconnected
+2026-09-19 08:00:08,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               item expired
+2026-09-19 08:00:09,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            pb.ClientGmsImpl.determineCoord         heartbeat
+2026-09-19 08:00:09,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Add                               cache miss
+2026-09-19 08:00:09,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           GMS.InstallView                         cache miss
+2026-09-19 08:00:09,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:09,200         Alachisoft.NCache.CacheHost                     demoCache                                       74                                              WARN            GMS.InstallView                         bulk insert finished
+2026-09-19 08:00:09,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Insert                            heartbeat
+2026-09-19 08:00:09,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           pb.ClientGmsImpl.determineCoord         cache miss
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:09,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         heartbeat
+2026-09-19 08:00:09,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               heartbeat
+2026-09-19 08:00:09,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         item expired
+2026-09-19 08:00:09,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         configuration reloaded
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:09,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         request completed
+2026-09-19 08:00:09,600         Alachisoft.NCache.CacheHost                     demoCache                                       53                                              INFO            Message Manager                         item expired
+2026-09-19 08:00:09,650         Alachisoft.NCache.CacheHost                     demoCache                                       22                                              WARN            Cache.Insert                            cache hit
+2026-09-19 08:00:09,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:09,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               heartbeat
+2026-09-19 08:00:09,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           CacheInfo                               client disconnected
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:09,850         Alachisoft.NCache.CacheHost                     demoCache                                       63                                              WARN            Cache.Add                               connection established
+2026-09-19 08:00:09,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               retrying operation
+2026-09-19 08:00:09,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            item expired
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:10,000         Alachisoft.NCache.CacheHost                     demoCache                                       2                                               INFO            TCP.start                               cache hit
+2026-09-19 08:00:10,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         bulk insert finished
+2026-09-19 08:00:10,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         item expired
+2026-09-19 08:00:10,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         retrying operation
+2026-09-19 08:00:10,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:10,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               bulk insert finished
+2026-09-19 08:00:10,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Message Manager                         connection established
+2026-09-19 08:00:10,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         connection established
+2026-09-19 08:00:10,400         Alachisoft.NCache.CacheHost                     demoCache                                       2                                               INFO            pb.ClientGmsImpl.determineCoord         retrying operation
+2026-09-19 08:00:10,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               request completed
+2026-09-19 08:00:10,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         client disconnected
+2026-09-19 08:00:10,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           GMS.InstallView                         client disconnected
+2026-09-19 08:00:10,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Add                               item expired
+2026-09-19 08:00:10,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           ConnectionTable.GetConnection           configuration reloaded
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:10,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           configuration reloaded
+2026-09-19 08:00:10,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:10,800         Alachisoft.NCache.CacheHost                     demoCache                                       54                                              INFO            Cache.Insert                            client disconnected
+2026-09-19 08:00:10,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               item expired
+2026-09-19 08:00:10,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               configuration reloaded
+2026-09-19 08:00:10,950         Alachisoft.NCache.CacheHost                     demoCache                                       18                                              INFO            Cache.Insert                            heartbeat
+2026-09-19 08:00:11,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         heartbeat
+2026-09-19 08:00:11,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               configuration reloaded
+2026-09-19 08:00:11,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Add                               cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:11,150         Alachisoft.NCache.CacheHost                     demoCache                                       56                                              INFO            TCP.start                               client disconnected
+2026-09-19 08:00:11,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           TCP.start                               heartbeat
+2026-09-19 08:00:11,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Add                               retrying operation
+2026-09-19 08:00:11,300         Alachisoft.NCache.CacheHost                     demoCache                                       64                                              WARN            ConnectionTable.GetConnection           bulk insert finished
+2026-09-19 08:00:11,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         cache hit
+2026-09-19 08:00:11,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         configuration reloaded
+2026-09-19 08:00:11,450         Alachisoft.NCache.CacheHost                     demoCache                                       50                                              WARN            Cache.Add                               connection established
+2026-09-19 08:00:11,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            pb.ClientGmsImpl.determineCoord         cache miss
+2026-09-19 08:00:11,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Message Manager                         heartbeat
+2026-09-19 08:00:11,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         item expired
+2026-09-19 08:00:11,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         bulk insert finished
+2026-09-19 08:00:11,700         Alachisoft.NCache.CacheHost                     demoCache                                       1                                               DEBUG           Message Manager                         cache hit
+2026-09-19 08:00:11,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           TCP.start                               heartbeat
+2026-09-19 08:00:11,800         Alachisoft.NCache.CacheHost                     demoCache                                       41                                              WARN            Message Manager                         cache hit
+2026-09-19 08:00:11,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:11,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:11,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         cache miss
+2026-09-19 08:00:12,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               cache miss
+2026-09-19 08:00:12,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache miss
+2026-09-19 08:00:12,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               client disconnected
+2026-09-19 08:00:12,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         configuration reloaded
+2026-09-19 08:00:12,200         Alachisoft.NCache.CacheHost                     demoCache                                       32                                              DEBUG           Cache.Insert                            request completed
+2026-09-19 08:00:12,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               connection established
+2026-09-19 08:00:12,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         cache miss
+2026-09-19 08:00:12,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:12,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            TCP.start                               bulk insert finished
+2026-09-19 08:00:12,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            ConnectionTable.GetConnection           item expired
+2026-09-19 08:00:12,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         retrying operation
+2026-09-19 08:00:12,550         Alachisoft.NCache.CacheHost                     demoCache                                       33                                              INFO            GMS.InstallView                         client disconnected
+2026-09-19 08:00:12,600         Alachisoft.NCache.CacheHost                     demoCache                                       63                                              INFO            CacheInfo                               item expired
+2026-09-19 08:00:12,650         Alachisoft.NCache.CacheHost                     demoCache                                       82                                              WARN            pb.ClientGmsImpl.determineCoord         cache miss
+2026-09-19 08:00:12,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               cache hit
+2026-09-19 08:00:12,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           ConnectionTable.GetConnection           bulk insert finished
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:12,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Insert                            item expired
+2026-09-19 08:00:12,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           client disconnected
+2026-09-19 08:00:12,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Message Manager                         bulk insert finished
+2026-09-19 08:00:12,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            CacheInfo                               request completed
+2026-09-19 08:00:13,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         item expired
+2026-09-19 08:00:13,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               heartbeat
+2026-09-19 08:00:13,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache miss
+2026-09-19 08:00:13,150         Alachisoft.NCache.CacheHost                     demoCache                                       11                                              ERROR           pb.ClientGmsImpl.determineCoord         configuration reloaded
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:13,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           ConnectionTable.GetConnection           retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:13,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               retrying operation
+2026-09-19 08:00:13,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Add                               cache hit
+2026-09-19 08:00:13,350         Alachisoft.NCache.CacheHost                     demoCache                                       74                                              ERROR           GMS.InstallView                         cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:13,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            CacheInfo                               client disconnected
+2026-09-19 08:00:13,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           CacheInfo                               item expired
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:13,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:13,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           cache miss
+2026-09-19 08:00:13,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Insert                            client disconnected
+2026-09-19 08:00:13,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           item expired
+2026-09-19 08:00:13,700         Alachisoft.NCache.CacheHost                     demoCache                                       1                                               INFO            Cache.Add                               cache miss
+2026-09-19 08:00:13,750         Alachisoft.NCache.CacheHost                     demoCache                                       58                                              INFO            Cache.Insert                            item expired
+2026-09-19 08:00:13,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         cache hit
+2026-09-19 08:00:13,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               cache miss
+2026-09-19 08:00:13,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               bulk insert finished
+2026-09-19 08:00:13,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         bulk insert finished
+2026-09-19 08:00:14,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Add                               request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:14,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           TCP.start                               bulk insert finished
+2026-09-19 08:00:14,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           pb.ClientGmsImpl.determineCoord         request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:14,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Add                               client disconnected
+2026-09-19 08:00:14,200         Alachisoft.NCache.CacheHost                     demoCache                                       5                                               INFO            GMS.InstallView                         configuration reloaded
+2026-09-19 08:00:14,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               heartbeat
+2026-09-19 08:00:14,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         item expired
+2026-09-19 08:00:14,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         item expired
+2026-09-19 08:00:14,400         Alachisoft.NCache.CacheHost                     demoCache                                       77                                              WARN            CacheInfo                               client disconnected
+2026-09-19 08:00:14,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               bulk insert finished
+2026-09-19 08:00:14,500         Alachisoft.NCache.CacheHost                     demoCache                                       86                                              INFO            Cache.Add                               item expired
+2026-09-19 08:00:14,550         Alachisoft.NCache.CacheHost                     demoCache                                       67                                              INFO            GMS.InstallView                         client disconnected
+2026-09-19 08:00:14,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               connection established
+2026-09-19 08:00:14,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           cache hit
+2026-09-19 08:00:14,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:14,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Add                               retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:14,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Message Manager                         configuration reloaded
+2026-09-19 08:00:14,850         Alachisoft.NCache.CacheHost                     demoCache                                       35                                              DEBUG           Message Manager                         cache hit
+2026-09-19 08:00:14,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            retrying operation
+2026-09-19 08:00:14,950         Alachisoft.NCache.CacheHost                     demoCache                                       81                                              INFO            CacheInfo                               cache miss
+2026-09-19 08:00:15,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            cache miss
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:15,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         configuration reloaded
+2026-09-19 08:00:15,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               configuration reloaded
+2026-09-19 08:00:15,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         retrying operation
+2026-09-19 08:00:15,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         cache miss
+2026-09-19 08:00:15,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            TCP.start                               configuration reloaded
+2026-09-19 08:00:15,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            TCP.start                               connection established
+2026-09-19 08:00:15,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           cache hit
+2026-09-19 08:00:15,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         cache miss
+2026-09-19 08:00:15,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            CacheInfo                               configuration reloaded
+2026-09-19 08:00:15,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               cache miss
+2026-09-19 08:00:15,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         configuration reloaded
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:15,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               connection established
+2026-09-19 08:00:15,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               client disconnected
+2026-09-19 08:00:15,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            ConnectionTable.GetConnection           connection established
+2026-09-19 08:00:15,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Add                               configuration reloaded
+2026-09-19 08:00:15,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         request completed
+2026-09-19 08:00:15,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:15,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:15,950         Alachisoft.NCache.CacheHost                     demoCache                                       24                                              INFO            pb.ClientGmsImpl.determineCoord         heartbeat
+2026-09-19 08:00:16,000         Alachisoft.NCache.CacheHost                     demoCache                                       64                                              INFO            TCP.start                               cache hit
+2026-09-19 08:00:16,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            item expired
+2026-09-19 08:00:16,100         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           cache hit
+2026-09-19 08:00:16,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache miss
+2026-09-19 08:00:16,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Insert                            cache miss
+2026-09-19 08:00:16,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            CacheInfo                               retrying operation
+2026-09-19 08:00:16,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Cache.Insert                            bulk insert finished
+2026-09-19 08:00:16,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            configuration reloaded
+2026-09-19 08:00:16,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Message Manager                         connection established
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:16,450         Alachisoft.NCache.CacheHost                     demoCache                                       31                                              WARN            Cache.Insert                            connection established
+2026-09-19 08:00:16,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               client disconnected
+2026-09-19 08:00:16,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            heartbeat
+2026-09-19 08:00:16,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         client disconnected
+2026-09-19 08:00:16,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache miss
+2026-09-19 08:00:16,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            client disconnected
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:16,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         configuration reloaded
+2026-09-19 08:00:16,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           pb.ClientGmsImpl.determineCoord         request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:16,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Add                               retrying operation
+2026-09-19 08:00:16,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            item expired
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:16,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Message Manager                         cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:17,000         Alachisoft.NCache.CacheHost                     demoCache                                       35                                              WARN            CacheInfo                               request completed
+2026-09-19 08:00:17,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           CacheInfo                               request completed
+2026-09-19 08:00:17,100         Alachisoft.NCache.CacheHost                     demoCache                                       61                                              INFO            pb.ClientGmsImpl.determineCoord         retrying operation
+2026-09-19 08:00:17,150         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            configuration reloaded
+2026-09-19 08:00:17,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         client disconnected
+2026-09-19 08:00:17,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            pb.ClientGmsImpl.determineCoord         retrying operation
+2026-09-19 08:00:17,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Message Manager                         heartbeat
+2026-09-19 08:00:17,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         retrying operation
+2026-09-19 08:00:17,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:17,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            Message Manager                         connection established
+2026-09-19 08:00:17,500         Alachisoft.NCache.CacheHost                     demoCache                                       43                                              INFO            CacheInfo                               cache miss
+2026-09-19 08:00:17,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               request completed
+2026-09-19 08:00:17,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               heartbeat
+2026-09-19 08:00:17,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               item expired
+2026-09-19 08:00:17,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         heartbeat
+2026-09-19 08:00:17,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               client disconnected
+2026-09-19 08:00:17,800         Alachisoft.NCache.CacheHost                     demoCache                                       62                                              ERROR           GMS.InstallView                         retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:17,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            TCP.start                               configuration reloaded
+2026-09-19 08:00:17,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            bulk insert finished
+2026-09-19 08:00:17,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           pb.ClientGmsImpl.determineCoord         heartbeat
+2026-09-19 08:00:18,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            request completed
+2026-09-19 08:00:18,050         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            GMS.InstallView                         configuration reloaded
+2026-09-19 08:00:18,100         Alachisoft.NCache.CacheHost                     demoCache                                       86                                              INFO            Message Manager                         item expired
+2026-09-19 08:00:18,150         Alachisoft.NCache.CacheHost                     demoCache                                       61                                              WARN            Message Manager                         bulk insert finished
+2026-09-19 08:00:18,200         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               bulk insert finished
+2026-09-19 08:00:18,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Message Manager                         heartbeat
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:18,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            ConnectionTable.GetConnection           client disconnected
+2026-09-19 08:00:18,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           TCP.start                               cache hit
+2026-09-19 08:00:18,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            pb.ClientGmsImpl.determineCoord         configuration reloaded
+2026-09-19 08:00:18,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            cache miss
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:18,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Add                               configuration reloaded
+2026-09-19 08:00:18,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               item expired
+2026-09-19 08:00:18,600         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Add                               item expired
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:18,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           Cache.Insert                            cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:18,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            CacheInfo                               heartbeat
+2026-09-19 08:00:18,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            bulk insert finished
+2026-09-19 08:00:18,800         Alachisoft.NCache.CacheHost                     demoCache                                       35                                              INFO            CacheInfo                               bulk insert finished
+2026-09-19 08:00:18,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            GMS.InstallView                         client disconnected
+2026-09-19 08:00:18,900         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         bulk insert finished
+2026-09-19 08:00:18,950         Alachisoft.NCache.CacheHost                     demoCache                                       76                                              INFO            GMS.InstallView                         retrying operation
+2026-09-19 08:00:19,000         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               cache hit
+2026-09-19 08:00:19,050         Alachisoft.NCache.CacheHost                     demoCache                                       74                                              DEBUG           Cache.Insert                            bulk insert finished
+2026-09-19 08:00:19,100         Alachisoft.NCache.CacheHost                     demoCache                                       33                                              ERROR           Message Manager                         request completed
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:19,150         Alachisoft.NCache.CacheHost                     demoCache                                       44                                              INFO            Cache.Add                               bulk insert finished
+2026-09-19 08:00:19,200         Alachisoft.NCache.CacheHost                     demoCache                                       36                                              INFO            ConnectionTable.GetConnection           client disconnected
+2026-09-19 08:00:19,250         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               heartbeat
+2026-09-19 08:00:19,300         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:19,350         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            CacheInfo                               heartbeat
+2026-09-19 08:00:19,400         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Insert                            cache hit
+2026-09-19 08:00:19,450         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           GMS.InstallView                         retrying operation
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:19,500         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            pb.ClientGmsImpl.determineCoord         item expired
+2026-09-19 08:00:19,550         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  ERROR           CacheInfo                               cache hit
+Alachisoft.NCache.Runtime.Exceptions.OperationFailedException: operation failed
+   at Alachisoft.NCache.Server.Op.Execute()
+   at Alachisoft.NCache.Server.Pipeline.Run()
+2026-09-19 08:00:19,600         Alachisoft.NCache.CacheHost                     demoCache                                       52                                              DEBUG           Cache.Add                               client disconnected
+2026-09-19 08:00:19,650         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  DEBUG           Cache.Add                               cache hit
+2026-09-19 08:00:19,700         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  WARN            TCP.start                               configuration reloaded
+2026-09-19 08:00:19,750         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            GMS.InstallView                         client disconnected
+2026-09-19 08:00:19,800         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Message Manager                         retrying operation
+2026-09-19 08:00:19,850         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            CacheInfo                               item expired
+2026-09-19 08:00:19,900         Alachisoft.NCache.CacheHost                     demoCache                                       18                                              WARN            CacheInfo                               client disconnected
+2026-09-19 08:00:19,950         Alachisoft.NCache.CacheHost                     demoCache                                       .NET TP Worker                                  INFO            Cache.Add                               item expired

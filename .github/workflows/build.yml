@@ -1,0 +1,91 @@
+# Reusable workflow: builds the six release archives (linux, darwin and windows,
+# each for amd64 and arm64) plus SHA256SUMS, uploads them as the "logi-binaries"
+# artifact, and then runs the binaries on their own platforms.
+#
+# It is called by ci.yml (every push and pull request, with a development version
+# number) and by release.yml (version tags, with the tag's version).
+name: build
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        description: Version to embed in the binaries and to name the archives with (a leading "v" is optional)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  binaries:
+    name: build archives
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Build linux, darwin and windows archives for amd64 and arm64
+        env:
+          VERSION: ${{ inputs.version }}
+        run: bash scripts/release.sh "$VERSION"
+      - name: List the result
+        run: ls -l dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: logi-binaries
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+
+  # A cross-compiled binary that does not start is worse than no binary: run the
+  # one built for each platform the runners can execute, and verify every checksum.
+  smoke:
+    name: run on ${{ matrix.name }}
+    needs: binaries
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: linux amd64,   os: ubuntu-latest,  asset: linux_amd64,   ext: tar.gz }
+          - { name: macOS arm64,   os: macos-latest,   asset: darwin_arm64,  ext: tar.gz }
+          - { name: windows amd64, os: windows-latest, asset: windows_amd64, ext: zip }
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: logi-binaries
+          path: dist
+      - name: Verify checksums (Linux)
+        if: runner.os == 'Linux'
+        run: cd dist && sha256sum -c SHA256SUMS
+      - name: Verify checksums (macOS)
+        if: runner.os == 'macOS'
+        run: cd dist && shasum -a 256 -c SHA256SUMS
+      - name: Run the binary (Linux and macOS)
+        if: runner.os != 'Windows'
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          v="${VERSION#v}"
+          mkdir out && tar -xzf "dist/logi_${v}_${{ matrix.asset }}.tar.gz" -C out
+          bin="out/logi_${v}_${{ matrix.asset }}/logi"
+          "$bin" --version | tee version.txt
+          grep -F "v${v}" version.txt
+          "$bin" --list-parsers
+          "$bin" --help > /dev/null
+      - name: Run the binary (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          $v = $env:VERSION.TrimStart('v')
+          Expand-Archive "dist/logi_${v}_${{ matrix.asset }}.zip" -DestinationPath out
+          $bin = "out/logi_${v}_${{ matrix.asset }}/logi.exe"
+          $out = & $bin --version
+          $out
+          if (-not ($out -match [regex]::Escape("v$v"))) { throw "unexpected version output: $out" }
+          & $bin --list-parsers
+          & $bin --help | Out-Null
