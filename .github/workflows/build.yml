@@ -32,7 +32,7 @@ jobs:
         run: bash scripts/release.sh "$VERSION"
       - name: List the result
         run: ls -l dist
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: logi-binaries
           path: dist/
