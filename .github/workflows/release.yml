@@ -94,7 +94,7 @@ jobs:
             echo "Verify with \`SHA256SUMS\` (\`sha256sum -c SHA256SUMS --ignore-missing\`). Usage: see README.md and docs/HOWTO.md inside the archive."
           } >> notes.md
           cat notes.md
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           name: logi v${{ needs.verify.outputs.version }}
           body_path: notes.md
