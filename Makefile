@@ -3,7 +3,7 @@ VERSION ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo dev)
 LDFLAGS := -s -w -X main.version=$(VERSION)
 DIST    := dist
 
-.PHONY: all deps build test race short bench fuzz fmt vet dist clean
+.PHONY: all deps build test race short bench fuzz fmt vet lint dist clean
 
 all: build
 
@@ -49,6 +49,10 @@ fmt:
 vet:
 	go vet ./...
 	GOOS=windows go vet ./...
+
+lint: ## static analysis as run in CI (staticcheck, govulncheck); needs network the first time
+	go run honnef.co/go/tools/cmd/staticcheck@latest ./...
+	go run golang.org/x/vuln/cmd/govulncheck@latest ./...
 
 dist:            ## cross-compile release binaries
 	@mkdir -p $(DIST)

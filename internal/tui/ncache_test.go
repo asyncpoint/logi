@@ -17,8 +17,6 @@ func ncacheFixture(t *testing.T) string {
 	return string(b)
 }
 
-func cells(line string) []string { return strings.Fields(line) }
-
 // The exact scenario from the bug report: a real NCache cache log.
 func TestRealNCacheLogShowsItsOwnColumnsAndLevels(t *testing.T) {
 	r := newRig(t, ncacheFixture(t), nil)

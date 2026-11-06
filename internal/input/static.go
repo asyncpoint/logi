@@ -360,7 +360,7 @@ func (s *StaticStore) loadBlock(b uint64) *cachedBlock {
 	}
 	cb := &cachedBlock{recs: make([]engine.LogRecord, 0, s.block)}
 	scratch := s.getScratch()
-	ok := s.readSegment(context.Background(), indexView{cps, spanEnd}, segment{b, b + 1}, &scratch, &scanSpec{}, func(r *engine.LogRecord) bool {
+	ok := s.readSegment(context.Background(), indexView{cps, spanEnd}, segment{b, b + 1}, scratch, &scanSpec{}, func(r *engine.LogRecord) bool {
 		r.DetachRaw()
 		cb.bytes += int64(r.RetainedBytes())
 		cb.recs = append(cb.recs, *r)
@@ -404,16 +404,22 @@ func (s *StaticStore) loadBlock(b uint64) *cachedBlock {
 // getScratch/putScratch reuse file-read buffers across sequential scans and
 // cache misses. Oversized buffers are discarded so unusual records cannot make
 // the pool retain unbounded amounts of memory.
-func (s *StaticStore) getScratch() []byte {
-	if b := s.scratchPool.Get(); b != nil {
-		return b.([]byte)[:0]
+//
+// The pool holds pointers: a slice stored in a sync.Pool by value is boxed into a
+// new allocation on every Put. readSegment grows the buffer through the pointer,
+// so the pool keeps the larger buffer.
+func (s *StaticStore) getScratch() *[]byte {
+	if p, ok := s.scratchPool.Get().(*[]byte); ok {
+		*p = (*p)[:0]
+		return p
 	}
-	return nil
+	return new([]byte)
 }
 
-func (s *StaticStore) putScratch(b []byte) {
-	if cap(b) > 0 && cap(b) <= rangeSegmentBytes {
-		s.scratchPool.Put(b[:0])
+func (s *StaticStore) putScratch(p *[]byte) {
+	if c := cap(*p); c > 0 && c <= rangeSegmentBytes {
+		*p = (*p)[:0]
+		s.scratchPool.Put(p)
 	}
 }
 
@@ -504,12 +510,12 @@ func (s *StaticStore) RangeMatching(ctx context.Context, from, to uint64, keep f
 		}
 	}
 	buf := s.getScratch()
-	defer func() { s.putScratch(buf) }()
+	defer s.putScratch(buf)
 	for _, sg := range segs {
 		if ctx.Err() != nil {
 			return
 		}
-		ok := s.readSegment(ctx, ix, sg, &buf, sp, func(r *engine.LogRecord) bool {
+		ok := s.readSegment(ctx, ix, sg, buf, sp, func(r *engine.LogRecord) bool {
 			deliver, more := sp.classify(r)
 			if !deliver {
 				return more
@@ -604,7 +610,7 @@ func (s *StaticStore) rangeParallel(ctx context.Context, ix indexView, segs []se
 		go func() {
 			defer wg.Done()
 			buf := s.getScratch()
-			defer func() { s.putScratch(buf) }()
+			defer s.putScratch(buf)
 			for i := range jobs {
 				out := getRecSlice()
 
@@ -619,7 +625,7 @@ func (s *StaticStore) rangeParallel(ctx context.Context, ix indexView, segs []se
 					hint = int(blocks) * s.block
 				}
 
-				ok := s.readSegment(wctx, ix, segs[i], &buf, sp, func(r *engine.LogRecord) bool {
+				ok := s.readSegment(wctx, ix, segs[i], buf, sp, func(r *engine.LogRecord) bool {
 					if stop.Load() {
 						return false
 					}

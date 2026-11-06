@@ -13,7 +13,6 @@ import (
 // the renderer, and --color always/never override detection.
 var (
 	stDim      = lipgloss.NewStyle().Faint(true)
-	stHeader   = lipgloss.NewStyle().Bold(true).Reverse(true)
 	stStatus   = lipgloss.NewStyle().Reverse(true)
 	stBadge    = lipgloss.NewStyle().Bold(true).Reverse(true).Foreground(lipgloss.Color("2"))
 	stBadgeLv  = lipgloss.NewStyle().Bold(true).Reverse(true).Foreground(lipgloss.Color("6"))

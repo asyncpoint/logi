@@ -40,7 +40,6 @@ type updateMsg app.Update
 
 type severityNavMsg struct {
 	id         uint64
-	err        error
 	generation uint64
 	label      string
 }

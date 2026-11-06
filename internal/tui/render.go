@@ -322,9 +322,7 @@ func (m *Model) renderRow(rec *engine.LogRecord, cursor bool, idw, fixedWidth in
 			continue
 		}
 		st := sg.st
-		if cursor && sg.st.GetBackground() == nil {
-			st = st.Reverse(true)
-		} else if cursor {
+		if cursor {
 			st = st.Reverse(true)
 		}
 		b.WriteString(st.Render(sg.text))
@@ -571,9 +569,7 @@ func (m *Model) buildDetail() {
 	// the layout are appended in stable alphabetical order.
 	l = append(l, "")
 	l = append(l, stDim.Render("FIELDS"))
-	for _, line := range m.detailTable(&rec, w) {
-		l = append(l, line)
-	}
+	l = append(l, m.detailTable(&rec, w)...)
 	m.detailLines, m.detailWidth = l, m.w
 }
 
