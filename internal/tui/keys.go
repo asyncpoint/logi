@@ -191,13 +191,39 @@ func (m *Model) typeText(s string) {
 	}
 	f := m.textField()
 	*f += s
+	m.edited()
+}
+
+// edited runs after the text field changed: it drops a stale error and, for the
+// search box, brings the search and its highlights in line with the new text.
+func (m *Model) edited() {
 	m.resetSelection()
 	if m.ov == ovPrompt {
 		m.perr = ""
 		if m.pk == pSearch {
-			m.searchReq.Query = m.input
-			m.startSearch(m.anchorID, app.Forward, true) // search-as-you-type from the anchor
+			m.searchEdited()
 		}
+	}
+}
+
+// searchEdited re-runs the search from where the box was opened (search as you
+// type). An empty box means no search at all: the pending scan, the match and the
+// highlighting go, and the cursor returns to where it was, as for Esc.
+func (m *Model) searchEdited() {
+	m.searchReq.Query = m.input
+	if m.input == "" {
+		m.clearSearch()
+		return
+	}
+	m.startSearch(m.anchorID, app.Forward, true)
+}
+
+func (m *Model) clearSearch() {
+	m.sess.ClearSearch()
+	m.sPending, m.sstate, m.sfoundID = false, "", 0
+	if m.anchorID != 0 {
+		m.cursorID = m.anchorID
+		m.ensureVisible()
 	}
 }
 
@@ -206,14 +232,7 @@ func (m *Model) backspace() {
 	f := m.textField()
 	_, n := utf8.DecodeLastRuneInString(*f)
 	*f = (*f)[:len(*f)-n]
-	m.resetSelection()
-	if m.ov == ovPrompt {
-		m.perr = ""
-		if m.pk == pSearch {
-			m.searchReq.Query = m.input
-			m.startSearch(m.anchorID, app.Forward, true)
-		}
-	}
+	m.edited()
 }
 
 // editKey handles the common line-editing keys; it reports whether it consumed k.
@@ -224,8 +243,7 @@ func (m *Model) editKey(k tea.KeyPressMsg, key string) bool {
 		m.backspace()
 	case "ctrl+u":
 		*f = ""
-		m.perr = ""
-		m.resetSelection()
+		m.edited()
 	case "ctrl+w":
 		t := strings.TrimRight(*f, " ")
 		if i := strings.LastIndexByte(t, ' '); i >= 0 {
@@ -233,7 +251,7 @@ func (m *Model) editKey(k tea.KeyPressMsg, key string) bool {
 		} else {
 			*f = ""
 		}
-		m.resetSelection()
+		m.edited()
 	default:
 		if k.Text != "" && k.Mod&(tea.ModCtrl|tea.ModAlt) == 0 {
 			m.typeText(k.Text)
@@ -268,7 +286,7 @@ func (m *Model) promptKey(k tea.KeyPressMsg, key string) (tea.Model, tea.Cmd) {
 	case "alt+c":
 		if m.pk == pSearch {
 			m.searchReq.CaseSensitive = !m.searchReq.CaseSensitive
-			m.startSearch(m.anchorID, app.Forward, true)
+			m.searchEdited()
 		}
 		return m, nil
 	}
@@ -282,7 +300,7 @@ func (m *Model) toggleMode(mode search.Mode) {
 	} else {
 		m.searchReq.Mode = mode
 	}
-	m.startSearch(m.anchorID, app.Forward, true)
+	m.searchEdited()
 }
 
 func (m *Model) submitPrompt() (tea.Model, tea.Cmd) {

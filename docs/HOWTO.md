@@ -155,7 +155,9 @@ Press `/` (or `Ctrl+F`) and type. The cursor jumps to the first match as the tex
 | `Alt+R` | Switch to regular-expression mode (press again for literal) |
 | `Alt+F` | Switch to field mode (press again for literal) |
 | `Alt+C` | Toggle case sensitivity |
-| `Ctrl+U` / `Ctrl+W` | Clear the box / delete a word |
+| `Ctrl+U` / `Ctrl+W` | Clear the box / delete a word (the search and its highlighting follow) |
+
+Erasing the whole text, with `Backspace`, `Ctrl+U` or `Ctrl+W`, cancels the search: all highlighting disappears and the cursor returns to where the search began.
 
 After closing the box, `n` (or `F3`) goes to the next match and `N` (or `Shift+F3`) to the previous one. A search wraps around at the end of the view.
 

@@ -7,6 +7,7 @@ import (
 
 	"github.com/asyncpoint/logi/internal/config"
 	"github.com/asyncpoint/logi/internal/engine"
+	"github.com/asyncpoint/logi/internal/search"
 )
 
 func waitCounted(t *testing.T, s *Session) Status {
@@ -90,5 +91,30 @@ func TestLiveModeHasNoCensus(t *testing.T) {
 	}
 	if s.Status().Stats.BySeverity[engine.SevError] != 10 {
 		t.Fatalf("live counters: %+v", s.Status().Stats.BySeverity)
+	}
+}
+
+// ClearSearch removes the matcher (and with it the highlighting) and makes the
+// result of a search that was still running recognisable as stale.
+func TestClearSearchDropsTheMatcher(t *testing.T) {
+	s := newSession(t, logText(100), nil)
+	waitFor(t, "index", func() bool { return s.Status().IndexDone })
+	gen, err := s.Search(search.Request{Query: "message"}, 1, Forward, true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if s.Matcher() == nil {
+		t.Fatal("searching must install a matcher")
+	}
+	s.ClearSearch()
+	if s.Matcher() != nil {
+		t.Fatal("ClearSearch must remove the matcher")
+	}
+	gen2, err := s.Search(search.Request{Query: "message"}, 1, Forward, true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if gen2 <= gen+1 {
+		t.Fatalf("generation did not move past the cleared search: %d then %d", gen, gen2)
 	}
 }

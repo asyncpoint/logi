@@ -32,6 +32,20 @@ func (q *searchState) Start(parent context.Context, matcher *search.Matcher) (co
 	return ctx, q.gen
 }
 
+// Clear drops the current query: a running search is cancelled, the matcher goes
+// (so nothing is highlighted any more) and the generation moves on, so that a
+// result of the cancelled search is recognisably stale.
+func (q *searchState) Clear() {
+	q.mu.Lock()
+	if q.cancel != nil {
+		q.cancel()
+		q.cancel = nil
+	}
+	q.matcher = nil
+	q.gen++
+	q.mu.Unlock()
+}
+
 func (q *searchState) Cancel() {
 	q.mu.Lock()
 	if q.cancel != nil {

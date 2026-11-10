@@ -24,6 +24,10 @@ func (s *Session) Matcher() *search.Matcher {
 	return s.query.Matcher()
 }
 
+// ClearSearch forgets the current search: it stops a running one and removes the
+// highlighting that follows the last matcher.
+func (s *Session) ClearSearch() { s.query.Clear() }
+
 // Search starts an asynchronous search over the current view, beginning at
 // record fromID (exclusive unless inclusive). A newer search cancels the
 // previous one; stale results are recognisable by SearchResult.Gen.
