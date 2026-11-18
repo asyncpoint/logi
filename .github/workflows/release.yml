@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to build, e.g. 1.1.0 (builds the archives as an artifact; only a pushed tag publishes a release)'
+        description: 'Version to build, e.g. 1.0.0 (builds the archives as an artifact; only a pushed tag publishes a release)'
         required: true
         type: string
 
