@@ -1,4 +1,4 @@
-# logi — Log Inspector
+# logi — The Log Inspector
 
 **logi** is a fast, terminal-first log inspector for developers. It opens a quiet static log, a multi-gigabyte file, a log that is still growing, a directory of rotating logs, or the output of `docker logs` and `kubectl logs`, and keeps the same keyboard-driven view for all of them.
 
